@@ -8,27 +8,27 @@ cursor = cnx.cursor()
 cursor.execute("SHOW TABLES")
 for table in cursor:
     print(table)
-    print(---------------------------------)
+print("---------------------------------")
 #uralkodok show    
 
 cursor.execute("SELECT * FROM uralkodo")
 for uralkodo in cursor:
     print(uralkodo)
-    print(---------------------------------)
+print("---------------------------------")
 #MATYI
 
 
 cursor.execute("SELECT * FROM uralkodo WHERE nev= 'I. Mátyás'")
 for uralkodo in cursor:
     print(uralkodo)
-    print(---------------------------------)
+print("---------------------------------")
 
 #matyi ev 
 
 cursor.execute("SELECT szul, hal FROM uralkodo WHERE nev = 'I. Mátyás'")
 for uralkodo in cursor:
     print(f"Mátyás király élt: {uralkodo[0]} - {uralkodo[1]}")
-    print(---------------------------------)
+print("---------------------------------")
 
 cnx.close()
 
